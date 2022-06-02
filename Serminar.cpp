@@ -7,7 +7,16 @@ protected:
 	double startBalance;
 	string COKAccountHolders;
 	double limit;
+public:
+	Bank();
+	~Bank();
 };
+Bank::Bank(){
+	startBalance = 0;
+	COKAccountHolders = "";
+	limit = 0;
+}
+~Bank::Bank(){};
 
 class ATMAccountHolders : public Bank
 {
@@ -21,7 +30,7 @@ protected:
 	double amount;
 
 public:
-    ATMAccountHolders();
+         ATMAccountHolders();
 	~ATMAccountHolders(){};
 	void deposit();
 	void withdraw();
