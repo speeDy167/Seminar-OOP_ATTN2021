@@ -9,14 +9,14 @@ protected:
 	double limit;
 public:
 	Bank();
-	~Bank();
+	~Bank(){};
 };
 Bank::Bank(){
 	startBalance = 0;
 	COKAccountHolders = "";
 	limit = 0;
 }
-~Bank::Bank(){};
+
 
 class ATMAccountHolders : public Bank
 {
@@ -87,12 +87,12 @@ void ATMAccountHolders::withdraw()
 	cout << "\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\n\n";
 	cout << "\tStarting account balance : " << startBalance << " VND\n\n";
 	cout << "\tPresent available balance : " << accountBalance << " VND\n\n";
-	cout << "\tEnter the Amount to be Withdrawn VND: ";
+	cout << "\tEnter the Amount to be Withdrawn VND(Maximum 9000000): ";
 
 	double amount;
 	cin >> amount;
 
-	if (amount > accountBalance || amount > 900000)
+	if (amount > accountBalance || amount > 9000000)
 	{
 		system("cls");
 		cout << "\n\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb ATM ACCOUNT WITHDRAWAL \xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\n\n";
