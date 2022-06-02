@@ -26,7 +26,6 @@ protected:
 	int accountNumber;
 	double accountBalance;
 	double accountInterest;
-	int count;
 	double amount;
 
 public:
